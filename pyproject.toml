@@ -3,7 +3,7 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "archive2rocrate"
+name = "nirdarchive2rocrate"
 authors = [{name = "Hanne Moa", email = "hanne.moa@sikt.no"}]
 license = {file = "LICENSE"}
 classifiers = ["License :: OSI Approved :: MIT License"]
@@ -12,7 +12,7 @@ requires-python = ">=3.11.0"
 dependencies = ["requests"]
 
 [project.scripts]
-archive2rocrate = "archive2rocrate.cli:main"
+nirdarchive2rocrate = "archive2rocrate.cli:main"
 
 [project.urls]
 Home = "http://www.vg.no"

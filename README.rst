@@ -1,6 +1,6 @@
-===============
-Archive2rocrate
-===============
+===================
+nirdarchive2rocrate
+===================
 
 Library and command-line tool to convert Norstore Archive datasets to ro-crates.
 
@@ -11,16 +11,16 @@ Running
 
 Can be run even without installing, by first downloading the code, then doing oine of:
 
-1. entering the ``src``-directory and executing ``python -m archive2rocrate``
-2. adding ``src`` to $PYTHONPATH then executing ``python -m archive2rocrate``
+1. entering the ``src``-directory and executing ``python -m nirdarchive2rocrate``
+2. adding ``src`` to $PYTHONPATH then executing ``python -m nirdarchive2rocrate``
 
-If installed it can be executed with both ``python -m archive2rocrate``
-as well as ``archive2rocrate``.
+If installed it can be executed with both ``python -m nirdarchive2rocrate``
+as well as ``nirdarchive2rocrate``.
 
 Installation
 ============
 
-Install with pip: ``pip install archive2rocrate``
+Install with pip: ``pip install nirdarchive2rocrate``
 
 Inputting the endpoints
 =======================
@@ -33,11 +33,11 @@ a config-file, format::
 
 The config is searched for in the following files, in prioritized order::
 
-    $PWD/.archive2rocrate.toml
-    $HOME/.archive2rocrate.toml
-    $XDG_CONFIG_HOME/archive2rocrate.toml
-    /usr/local/etc/archive2rocrate.toml
-    /etc/archive2rocrate.toml
+    $PWD/.nirdarchive2rocrate.toml
+    $HOME/.nirdarchive2rocrate.toml
+    $XDG_CONFIG_HOME/nirdarchive2rocrate.toml
+    /usr/local/etc/nirdarchive2rocrate.toml
+    /etc/nirdarchive2rocrate.toml
 
 The config can be overriden by the flags ``--dataset_endpoint`` and
 ``__list_endpoint``.

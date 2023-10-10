@@ -2,12 +2,14 @@ import tomllib
 from os import environ
 from pathlib import Path
 
+from . import name
+
 DEFAULT_XDG_CONFIG_HOME = Path.home() / '.config'
 XDG_CONFIG_HOME = environ.get('XDG_CONFIG_HOME', DEFAULT_XDG_CONFIG_HOME)
 VISIBLE_LOCATIONS = [XDG_CONFIG_HOME, Path('/usr/local/etc'), Path('/etc')]
 INVISIBLE_LOCATIONS = [Path.cwd(), Path.home()]
 
-CONFIG_FILE = 'archive2rocrate.toml'
+CONFIG_FILE = f'{name}.toml'
 CONFIG_PATHS = INVISIBLE_LOCATIONS + VISIBLE_LOCATIONS
 
 

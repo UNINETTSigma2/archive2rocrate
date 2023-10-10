@@ -2,6 +2,7 @@ import argparse
 import json
 import sys
 
+from . import name
 from .config import get_config
 from .convert import generate_jsonld, process_dataset, extract_dois
 from .scrape import get_doi_blobs, get_dataset, get_multiple_datasets
@@ -15,7 +16,7 @@ INDENT = 2
 
 def arg_setup():
     parser = argparse.ArgumentParser(
-        prog="archive2rocrate",
+        prog=name,
         description="Fetch and/or convert Norstore Archive datasets to ro-crates",
     )
     parser.add_argument(
