@@ -6,13 +6,27 @@ build-backend = "flit_core.buildapi"
 name = "nirdarchive2rocrate"
 authors = [{name = "Hanne Moa", email = "hanne.moa@sikt.no"}]
 license = {file = "LICENSE"}
-classifiers = ["License :: OSI Approved :: MIT License"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Archiving",
+    "Topic :: Utilities",
+]
 dynamic = ["version", "description"]
 requires-python = ">=3.11.0"
 dependencies = ["requests"]
 
 [project.scripts]
-nirdarchive2rocrate = "archive2rocrate.cli:main"
+nirdarchive2rocrate = "nirdarchive2rocrate.cli:main"
 
 [project.urls]
-Home = "http://www.vg.no"
+Home = "https://github.com/UNINETTSigma2/nirdarchive2rocrate"
