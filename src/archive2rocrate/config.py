@@ -1,4 +1,3 @@
-from dataclasses import dataclass
 import tomllib
 from os import environ
 from pathlib import Path

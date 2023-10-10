@@ -57,7 +57,7 @@ def get_dataset(doi, endpoint):
             error = str(error, encoding='ascii')
         raise ValueError(f"{code} {reason}: {error}, {url}")
     blob = r.json()
-    if not 'Dataset' in blob:
+    if 'Dataset' not in blob:
         raise ValueError(f"Wrong format for dataset: {blob}")
     return blob["Dataset"]
 

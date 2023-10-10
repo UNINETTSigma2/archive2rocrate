@@ -10,7 +10,7 @@ from .scrape import get_doi_blobs, get_dataset, get_multiple_datasets
 __all__ = []
 
 
-INDENT=2
+INDENT = 2
 
 
 def arg_setup():
