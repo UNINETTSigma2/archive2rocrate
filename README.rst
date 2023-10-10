@@ -40,7 +40,7 @@ The config is searched for in the following files, in prioritized order::
     /etc/nirdarchive2rocrate.toml
 
 The config can be overriden by the flags ``--dataset_endpoint`` and
-``__list_endpoint``.
+``--list_endpoint``.
 
 Trivia
 ======
