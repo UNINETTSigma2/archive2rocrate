@@ -83,9 +83,9 @@ def _get_blobs(args):
         blobs, errors = get_multiple_datasets(dois, config.DATASET_ENDPOINT)
     elif args.command == 'convert':
         blobs = json.load(args.json)
-        if isinstance(blob, dict):
+        if isinstance(blobs, dict):
             blobs = [blobs]
-        elif isinstance(blob, list):
+        elif isinstance(blobs, list):
             pass
         else:
             raise ValueError('Wrong format for input')
@@ -121,7 +121,7 @@ def main():
             crate = generate_jsonld(*process_dataset(dataset))
         except KeyError as e:
             if args.fail:
-                sys.stderr.write(json.dumps(blob, indent=INDENT) + '\n')
+                sys.stderr.write(json.dumps(blobs, indent=INDENT) + '\n')
                 sys.stderr.write(e)
                 sys.stderr.write('\n')
         else:
