@@ -52,7 +52,11 @@ def arg_setup():
 
 
 def _get_config(args):
-    config = get_config()
+    try:
+        config = get_config()
+    except FileNotFoundError:
+        config = Config()
+        sys.stderr.write("Config file not found, attempting to continue.\n")
     if args.dataset_endpoint:
         config.DATASET_ENDPOINT = args.dataset_endpoint
     if args.command == 'multi':
