@@ -218,5 +218,5 @@ def generate_jsonld(identifier, dataset, items):
     for item in items:
         item_set.add(tuple(item.items()))
     for item in item_set:
-        skeleton['@graph'].append(item)
+        skeleton['@graph'].append(dict(item))
     return skeleton
